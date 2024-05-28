@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OrderGUIController">
+   <children>
+      <ListView layoutX="14.0" layoutY="9.0" prefHeight="398.0" prefWidth="474.0" />
+      <Button layoutX="426.0" layoutY="416.0" mnemonicParsing="false" onAction="#writeAllClicked" text="Write All" textFill="#fc0505" />
+      <ScrollBar layoutX="473.0" layoutY="14.0" orientation="VERTICAL" prefHeight="286.0" prefWidth="14.0" />
+      <Button layoutX="152.0" layoutY="416.0" mnemonicParsing="false" onAction="#addOrder" text="Add Order" textFill="#065fe4" />
+      <Line endX="352.0" layoutX="120.0" layoutY="39.0" startX="-106.0" stroke="#076de1" />
+      <Label layoutX="224.0" layoutY="22.0" text="All Orders">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Line endX="359.0" layoutX="128.0" layoutY="299.0" startX="-114.0" stroke="#0a7af2" />
+      <Label layoutX="221.0" layoutY="300.0" text="Add Order">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="332.0" text="Thneeds:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="thneedsField" layoutX="85.0" layoutY="328.0" />
+      <Label layoutX="252.0" layoutY="332.0" text="Customer:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="373.0" text="Ordered:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="customerChoiceBox" layoutX="325.0" layoutY="328.0" prefWidth="150.0" />
+      <DatePicker fx:id="orderedDate" layoutX="85.0" layoutY="369.0" prefHeight="25.0" prefWidth="150.0" />
+      <VBox fx:id="ordersContainer" layoutX="16.0" layoutY="39.0" prefHeight="260.0" prefWidth="459.0" />
+      <Label layoutX="256.0" layoutY="373.0" text="Filled:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="filledDate" layoutX="325.0" layoutY="369.0" prefHeight="25.0" prefWidth="150.0" />
+      <Button layoutX="16.0" layoutY="416.0" mnemonicParsing="false" onAction="#saveButtonClicked" text="Save Order" />
+      <Button layoutX="273.0" layoutY="416.0" mnemonicParsing="false" onAction="#ShowCustomerButtonClicked" text="Show Customers" textFill="#37863f" />
+      <Button layoutX="18.0" layoutY="12.0" mnemonicParsing="false" onAction="#updateCustomerChoiceBox" prefHeight="25.0" prefWidth="59.0" text="Refresh" />
+   </children>
+</AnchorPane>
